@@ -11,7 +11,7 @@ namespace AcademiaDominioTeste
         public void TestIdadeFilme()
         {
             // Prepare
-            Filme filme = new Filme { Nome = "A", Ano = 1920 };
+            Movie filme = new Movie { Nome = "A", Ano = 1920 };
 
             // Execute
             var r = filme.IdadeFilme();
@@ -24,7 +24,7 @@ namespace AcademiaDominioTeste
         public void TestAdicionaActor()
         {
             // Prepare
-            Filme filme = new Filme { Nome = "A", Ano = 1972 };
+            Movie filme = new Movie { Nome = "A", Ano = 1972 };
 
             // Execute
             filme.AdicionarActor(new Actor { Nome = "A" });
@@ -40,7 +40,7 @@ namespace AcademiaDominioTeste
         public void TestAdicionaGenero()
         {
             // Prepare
-            Filme filme = new Filme { Nome = "A", Ano = 1972, Genero = "Terror" };
+            Movie filme = new Movie { Nome = "A", Ano = 1972, Genero = "Terror" };
 
             // Execute + Assert
             Assert.AreEqual(filme.Genero, "Terror");
@@ -50,7 +50,7 @@ namespace AcademiaDominioTeste
         public void TestAdicionaComentario()
         {
             // Prepare
-            Filme filme = new Filme { Nome = "A", Ano = 1972 };
+            Movie filme = new Movie { Nome = "A", Ano = 1972 };
             ApplicationUser applicationUser = new ApplicationUser { UserName = "A" };
 
             // Execute

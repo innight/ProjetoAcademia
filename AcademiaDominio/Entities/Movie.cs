@@ -10,13 +10,13 @@ namespace AcademiaDominio.Modelo
     /// <summary>
     /// Representa todos os filmes no nosso dominio
     /// </summary>
-    public class Filme : Entidade
+    public class Movie : Entidade
     {
         /// <summary>
         /// Repository IReposotyr
         /// Genericos? Criar Inser, update,delete
         /// </summary>
-        public Filme()
+        public Movie()
         {
             Actores = new List<Actor>();
             Comentarios = new List<Comentario>();
