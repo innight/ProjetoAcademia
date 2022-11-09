@@ -19,27 +19,41 @@ namespace AcademiaDominio.Modelo
         public Filme()
         {
             Actores = new List<Actor>();
+            Comentarios = new List<Comentario>();
         }
         public string Nome { get; set; }
         public int Ano { get; set; }
-
         public IList<Actor> Actores { get; set; }
+
+        // Adicionado 09/11/2022
+        public string BandaSonora { get; set; }
+        public string Genero { get; set; }
+        public IList<Comentario> Comentarios { get; set; }
 
         // Banda Sonora
         // Genero
         // Comentarios -> Utilizador Registado
         // Reviews (Estrelas)
 
+
+
+
+
         // Todas as classes devem ter os metodos Adicionar, Apagar, Actualizar, Ler um, Ler todos
 
         /// <summary>
-        ///  Permite adiconar um actor ao Filme 
+        ///  Permite adicionar um actor ao Filme 
         /// </summary>
         /// <param name="actor"></param>
 
         public void AdicionarActor(Actor actor)
         {
             Actores.Add(actor);
+        }
+
+        public void AdicionarComentario(Comentario comentario)
+        {
+            Comentarios.Add(comentario);
         }
 
         /// <summary>

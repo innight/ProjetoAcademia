@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcademiaDominio.Modelo
 {
-    class ApplicationUser
+    public class ApplicationUser
     {
         public string UserName { get; set; }
     }

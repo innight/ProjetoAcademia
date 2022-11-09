@@ -35,6 +35,33 @@ namespace AcademiaDominioTeste
             //Assert
             Assert.AreEqual(r1, 3);
         }
+
+        [TestMethod]
+        public void TestAdicionaGenero()
+        {
+            // Prepare
+            Filme filme = new Filme { Nome = "A", Ano = 1972, Genero = "Terror" };
+
+            // Execute + Assert
+            Assert.AreEqual(filme.Genero, "Terror");
+        }
+
+        [TestMethod]
+        public void TestAdicionaComentario()
+        {
+            // Prepare
+            Filme filme = new Filme { Nome = "A", Ano = 1972 };
+            ApplicationUser applicationUser = new ApplicationUser { UserName = "A" };
+
+            // Execute
+            filme.AdicionarComentario(new Comentario { ApplicationUser = applicationUser, Texto = "COmentario1" });
+            filme.AdicionarComentario(new Comentario { ApplicationUser = applicationUser, Texto = "COmentario2" });
+            var r1 = filme.Comentarios.Count();
+
+            //Assert
+            Assert.AreEqual(r1, 2);
+        }
+
     }
 }
 
