@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AcademiaDominio.Contratos;
+using AcademiaDominio.Enumerations;
 
 namespace AcademiaDominio.Modelo
 {
@@ -19,26 +20,18 @@ namespace AcademiaDominio.Modelo
         public Movie()
         {
             Actores = new List<Actor>();
-            Comentarios = new List<Comentario>();
+            Comments = new List<Comment>();
         }
         public string Nome { get; set; }
         public int Ano { get; set; }
-        public IList<Actor> Actores { get; set; }
-
-        // Adicionado 09/11/2022
         public string BandaSonora { get; set; }
-        public string Genero { get; set; }
-        public IList<Comentario> Comentarios { get; set; }
+        public Studio Studio { get; set; }
+        public MovieType MovieType { get; set; }
+        public IList<Actor> Actores { get; set; }
+        public IList<Review> Reviews { get; set; }
+        public IList<Comment> Comments { get; set; }
 
-        // Banda Sonora
-        // Genero
         // Comentarios -> Utilizador Registado
-        // Reviews (Estrelas)
-
-
-
-
-
         // Todas as classes devem ter os metodos Adicionar, Apagar, Actualizar, Ler um, Ler todos
 
         /// <summary>
@@ -51,9 +44,9 @@ namespace AcademiaDominio.Modelo
             Actores.Add(actor);
         }
 
-        public void AdicionarComentario(Comentario comentario)
+        public void AdicionarComentario(Comment comment)
         {
-            Comentarios.Add(comentario);
+            Comments.Add(comment);
         }
 
         /// <summary>

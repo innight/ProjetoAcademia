@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AcademiaDominio.Entities;
 using AcademiaDominio.Interfaces;
 using AcademiaDominio.Modelo;
 
@@ -31,6 +29,11 @@ namespace AcademiaDominio.Repositories
         }
 
         public Director Update(Director item)
+        {
+            throw new NotImplementedException();
+        }
+
+        IList<Director> ICRUD<Director, int>.GetAll()
         {
             throw new NotImplementedException();
         }

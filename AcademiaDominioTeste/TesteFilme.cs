@@ -54,8 +54,8 @@ namespace AcademiaDominioTeste
             ApplicationUser applicationUser = new ApplicationUser { UserName = "A" };
 
             // Execute
-            filme.AdicionarComentario(new Comentario { ApplicationUser = applicationUser, Texto = "COmentario1" });
-            filme.AdicionarComentario(new Comentario { ApplicationUser = applicationUser, Texto = "COmentario2" });
+            filme.AdicionarComentario(new Comment { ApplicationUser = applicationUser, Texto = "COmentario1" });
+            filme.AdicionarComentario(new Comment { ApplicationUser = applicationUser, Texto = "COmentario2" });
             var r1 = filme.Comentarios.Count();
 
             //Assert

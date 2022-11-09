@@ -10,7 +10,7 @@ namespace AcademiaDominio.Repositories
 {
     public class ActorCRUD : ICRUD<Actor, int>
     {
-        private readonly IList<Actor> _actores = new List<Actor>;
+        private readonly IList<Actor> _actores = new List<Actor>();
         public Actor Delete(int id)
         {
             _actores.RemoveAt(id);
@@ -30,7 +30,7 @@ namespace AcademiaDominio.Repositories
         public Actor Insert(Actor item)
         {
             // Utilização Lambda
-            var pesquisa = _actores.First(p => p.Id == item.Id && p.Nome == item.Nome);
+            var pesquisa = _actores.First(p => p.Id == item.Id);
             if (pesquisa == null)
             {
                 _actores.Add(item);
@@ -39,6 +39,11 @@ namespace AcademiaDominio.Repositories
         }
 
         public Actor Update(Actor item)
+        {
+            throw new NotImplementedException();
+        }
+
+        IList<Actor> ICRUD<Actor, int>.GetAll()
         {
             throw new NotImplementedException();
         }
